@@ -1,0 +1,180 @@
+@import "variables";
+
+.compulsory {
+  &:before {
+    content: "*";
+    color: red;
+  }
+}
+
+.limit-hints {
+  font-size: 10px;
+  color: #aaaaaa;
+  float: right;
+}
+
+.hover-underline {
+
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+}
+
+
+//超出三行使用点点点
+.list-text-restriction {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  position: relative;
+  line-height: 17px;
+  max-height: 51px;
+  -webkit-line-clamp: 3;
+  text-overflow: ellipsis;
+}
+
+.one-line {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+//讨厌的outline
+a {
+  outline: none;
+
+  &:focus, &:hover, &:active {
+    outline: none;
+  }
+}
+
+//制造一个手机容器
+.mobile-container {
+  max-width: 400px;
+  border: 1px solid #eee;
+  padding: 10px;
+  margin: 10px auto;
+  display: block;
+  background-color: white;
+}
+
+
+//按照字母来wrap，不然有些老长老长
+.wrap-word {
+  word-wrap: break-word;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.float-right {
+  float: right;
+}
+
+
+.display-none {
+  display: none !important;
+}
+
+
+//页面的导航样式
+.title-navigation {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #E6E6E6;
+  position: relative;
+
+  .item {
+    font-size: 18px;
+    color: #778195;
+    margin-top: 15px;
+    margin-right: 20px;
+    display: inline-block;
+    box-sizing: content-box;
+    line-height: 30px;
+
+    &:hover, &.active {
+      color: #333;
+      border-bottom: 2px solid #333;
+    }
+  }
+
+  .tool {
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+    display: inline-block;
+
+  }
+}
+
+//超链接导航样式
+.link {
+  color: #1890ff;
+  text-decoration: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  transition: color 0.3s;
+  text-decoration-skip: objects;
+}
+
+
+//图框样式
+.figure-block {
+  background-color: white;
+  box-shadow: 0 0 3px rgba(0, 0, 0, .2);
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 5px;
+
+
+  .title {
+    font-size: 18px;
+    padding: 15px 20px;
+    color: black;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+  }
+
+}
+
+
+.btn-file {
+  overflow: hidden;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+
+  input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    height: 100%;
+    width: 100%;
+    direction: ltr;
+    cursor: pointer;
+  }
+}
